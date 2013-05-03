@@ -10,4 +10,5 @@ baiduyun_addr_parser
 todo_list
 =========
 
+* read from file
 * gui(written in PySide)
