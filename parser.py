@@ -22,7 +22,7 @@ def parser(url):
                 subData = json.loads(subData.replace('\\', ''))
                 print subData['dlink']
         else:
-            print 'file\t{0}:\n{1}'.format(data['server_filename'], data['dlink'])
+            print 'file\t{0}:\n{1}'.format(data['server_filename'].encode('utf-8'), data['dlink'])
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
