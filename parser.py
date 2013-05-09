@@ -8,7 +8,8 @@ def genDirUrl(path, uk, shareid):
     
 def parser(url):
     jsonPattern = '{[^{}]*?fs_id[^{}]+}'
-    uk, shareid = re.search('uk=(\d+).*shareid=(\d+)', url).group(1, 2)
+    uk= re.search('uk=(\d+)', url).group(1)
+    shareid = re.search('shareid=(\d+)', url).group(1)
     r = requests.get(url)
     dataList = re.findall(jsonPattern, r.content)
     for data in dataList:
